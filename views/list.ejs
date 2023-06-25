@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        body{
+            height: auto;
+            width:500px;
+            background-color: papayawhip;
+            border: 3px solid black;
+            padding: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 20px;
+            margin: 100px auto;
+        }
+        h1{
+            font-size: 40px;
+            color: rgb(79, 98, 76);
+            margin-left: 90px;
+        }
+        ul{
+            font-size: 20px;
+        }
+        li{
+            border:2px solid black;
+            width: 375px;
+            list-style-type: none;
+            border-radius:20px ;
+            margin: auto;
+            padding: 10px;
+            background-color: aliceblue;
+            margin: 5px;
+        }
+        button:hover{
+            background-color: bisque;
+        }
+        button{
+            border: none;
+            padding: 10px;
+            border-radius:20px ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        #abc{
+            border:none;
+            padding: 10px;
+            border-radius:20px ;
+            margin-left: 160px;
+        }
+        .bcd{
+            margin: 10px;
+            border-radius: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1><%=ListTitle%></h1>
+    <ul>
+        
+        
+        <%for(var i=0;i<newListItem.length;i++){%>
+        <li><input type="checkbox" class="bcd">
+        <%=newListItem[i]%></li>
+        <%}%>  
+    </ul>
+    <form action="/" class="" method="post">
+        <input type="text" name="newItem" id="abc">
+        <button type="submit" name="button">Add</button>
+
+
+    </form>
+
+</body>
+</html>
